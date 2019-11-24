@@ -16,8 +16,8 @@ public class EchoClient {
 
     public EchoClient() throws SocketException, UnknownHostException {
         socket = new DatagramSocket();
-        address = InetAddress.getByName("192.168.1.31");
-        broadcastAddress = InetAddress.getByName("192.168.1.255");
+        address = InetAddress.getByName("localhost");
+        broadcastAddress = InetAddress.getByName("localhost"); //Should be something like x.x.x.255 eg 192.168.1.255
     }
 
     public String sendEcho(String msg) throws IOException {
