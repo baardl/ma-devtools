@@ -12,7 +12,9 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <root level="info">
+    <logger name="com.serotonin.bacnet4j.npdu.Network" level="trace" />
+
+    <root level="trace">
         <appender-ref ref="CONSOLE"/>
     </root>
 
