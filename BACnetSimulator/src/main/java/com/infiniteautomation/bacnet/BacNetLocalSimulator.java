@@ -65,7 +65,7 @@ public class BacNetLocalSimulator {
             MstpNode node = new SlaveNode("SlaveNode", is, os, (byte) 3);
             network = new MstpNetwork(node, 20);
         } else {
-            String bind = "0.0.0.0";
+            String bind = "192.168.1.250";
             int port = 47808;
             String broadcast = "255.255.255.255";
             
@@ -81,6 +81,7 @@ public class BacNetLocalSimulator {
             network = new IpNetworkBuilder()
                     .withPort(port)
                     .withLocalBindAddress(bind)
+                    .withReuseAddress(true)
                     .withLocalNetworkNumber(20)
                     .withBroadcast(broadcast, 255)
                     .build();
